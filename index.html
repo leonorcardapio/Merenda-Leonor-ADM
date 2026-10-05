@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel ADM do Merenda Leonor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="login" id="login">
+    <form class="login-box" id="login-form">
+      <img class="login-logo" src="img/logo-merenda-leonor.png" alt="">
+      <p class="welcome-label">ÁREA ADMINISTRATIVA</p>
+      <h1>Painel ADM</h1>
+      <label for="password">Digite a senha para continuar</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
+      <button type="submit">Entrar</button>
+      <p class="login-error" id="login-error" role="alert" hidden>Senha incorreta. Tente novamente.</p>
+    </form>
+  </main>
+
+  <div class="dashboard" id="dashboard" hidden>
+    <aside class="sidebar">
+      <a class="brand" href="#inicio">
+        <img class="brand-logo" src="img/logo-merenda-leonor.png" alt="Logo Merenda Leonor">
+        <span class="brand-name">Merenda&nbsp;Leonor ADM</span>
+      </a>
+
+      <section class="profile" aria-label="Perfil">
+        <span class="avatar" aria-hidden="true">
+          <svg viewBox="0 0 80 80">
+            <circle cx="40" cy="27" r="15" fill="currentColor"/>
+            <path d="M13 70c1-16 11-26 27-26s26 10 27 26" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="profile-name">Bem-vindo(a)</span>
+        <span class="profile-role">Administrativo</span>
+      </section>
+
+      <nav class="side-nav" aria-label="Menu principal">
+        <a class="side-link active" href="#inicio"><span aria-hidden="true">⌂</span> Painel</a>
+      </nav>
+
+      <p class="sidebar-footer">Painel administrativo</p>
+    </aside>
+
+    <main id="inicio">
+      <header class="topbar">
+        <div>
+          <p class="welcome-label">ÁREA ADMINISTRATIVA</p>
+          <h1>Painel ADM</h1>
+        </div>
+      </header>
+
+      <section class="access" id="acessos" aria-labelledby="access-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="access-title">Acessos rápidos</h2>
+            <p>Escolha o que deseja atualizar.</p>
+          </div>
+        </div>
+
+        <nav class="cards" aria-label="Acessos administrativos">
+          <a class="card" href="https://docs.google.com/document/d/16-lG55DIAdR8TJLutEmebH2kei7YEiRAVfO4Mj_AwNo/edit?tab=t.0" target="_blank" rel="noopener noreferrer">
+            <span class="card-icon docs" aria-hidden="true">▤</span>
+            <span class="card-title">Atualizar planilha da imagem</span>
+            <span class="card-description">Ao acessar a planilha vc deve fazer o login com a conta administrativa do Google</span>
+            <span class="card-action">Abrir planilha da imagem<span aria-hidden="true">↗</span></span>
+          </a>
+
+          <a class="card" href="https://docs.google.com/spreadsheets/d/1m0yHy7jqHcRS26BFNvkI126EjZDYCIuldRzhLLtQiu0/edit?gid=0#gid=0" target="_blank" rel="noopener noreferrer">
+            <span class="card-icon sheets" aria-hidden="true">▦</span>
+            <span class="card-title">Atualizar planilha da merenda</span>
+            <span class="card-description">Ao acessar a planilha vc deve fazer o login com a conta administrativa do Google</span>
+            <span class="card-action">Abrir planilha da merenda<span aria-hidden="true">↗</span></span>
+          </a>
+
+          <a class="card" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <span class="card-icon github" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.1c-3.1.68-3.75-1.32-3.75-1.32-.51-1.3-1.24-1.65-1.24-1.65-1.02-.7.08-.69.08-.69 1.12.08 1.72 1.15 1.72 1.15 1 1.71 2.63 1.22 3.27.93.1-.73.4-1.22.71-1.5-2.48-.28-5.09-1.24-5.09-5.53 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.3-2.61 5.24-5.1 5.52.4.35.76 1.02.76 2.06v3.13c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/>
+              </svg>
+            </span>
+            <span class="card-title">GitHub</span>
+            <span class="card-description">Ao acessar o GitHub vc deve fazer o login com a conta administrativa do Google</span>
+            <span class="card-action">Abrir GitHub <span aria-hidden="true">↗</span></span>
+          </a>
+        </nav>
+      </section>
+    </main>
+  </div>
+  <script>
+    const loginForm = document.querySelector("#login-form");
+    const passwordInput = document.querySelector("#password");
+    const loginError = document.querySelector("#login-error");
+    const loginPage = document.querySelector("#login");
+    const dashboard = document.querySelector("#dashboard");
+    const password = atob("bGVvbm9yMTIz");
+
+    loginForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (passwordInput.value === password) {
+        loginPage.hidden = true;
+        dashboard.hidden = false;
+        return;
+      }
+
+      loginError.hidden = false;
+      passwordInput.value = "";
+      passwordInput.focus();
+    });
+
+    passwordInput.addEventListener("input", () => {
+      loginError.hidden = true;
+    });
+  </script>
+</body>
+</html>
