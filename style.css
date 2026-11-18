@@ -359,10 +359,19 @@ h1 {
   color: #24292f;
 }
 
+.search-console {
+  color: #4285f4;
+}
+
 .github svg {
   width: 31px;
   height: 31px;
   fill: currentColor;
+}
+
+.search-console svg {
+  width: 30px;
+  height: 30px;
 }
 
 .card-title {
@@ -432,6 +441,11 @@ h1 {
   }
 
   .github svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .search-console svg {
     width: 25px;
     height: 25px;
   }
